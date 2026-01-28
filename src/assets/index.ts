@@ -31,12 +31,13 @@ import menu from './icons/menu.svg'
 import leftArrow from './icons/leftArrow.svg'
 import cancel from './icons/cancel.svg'
 import dish1 from './images/dish1.svg'
-// import dish2 from './images/dish2.svg'
+import dish2 from './images/dish2.svg'
 import dish3 from './images/dish3.svg'
 import dish4 from './images/dish4.svg'
 import dish5 from './images/dish5.svg'
 import dish6 from './images/dish6.svg'
 import inProgress from './images/inProgress.png'
+import bottomSub from './images/bottomSub.svg'
 
 export const Icons = {
     play,
@@ -75,12 +76,13 @@ export const Images = {
     twitter,
     family,
     dish1,
-    // dish2,
+    dish2,
     dish3,
     dish4,
     dish5,
     dish6,
-    inProgress
+    inProgress,
+    bottomSub
 
 
 

@@ -149,9 +149,10 @@ const Dashboard = () => {
         </div>
       </section>
 
-      {/* <section>
+      <section className={cn("w-full h-full")}>
         <RecipeCircle/>
-      </section> */}
+        <div className={cn("w-full h-full")}><img className={cn("w-full h-full")} src={Images.bottomSub} alt="" /></div>
+      </section>
  
       <section>
         <h1 className={cn("text-black md:text-[64px] text-[30px] font-poppins font-[400] leading-normal md:text-center ")}>
