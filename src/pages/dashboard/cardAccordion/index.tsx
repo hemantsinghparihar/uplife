@@ -1,14 +1,13 @@
-import React, { useState, useRef } from 'react'
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { cn } from '../../../utils/utils';
+import { useRef, useState } from 'react';
 import { Images } from '../../../assets';
+import { cn } from '../../../utils/utils';
 
 const CardAccordion = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const cardsRef = useRef([]);
-  const contentRef = useRef([]);
-  const verticalRef = useRef([]);
+  const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
+  const contentRef = useRef<(HTMLDivElement | null)[]>([]);
+  const verticalRef = useRef<(HTMLDivElement | null)[]>([]);
 
   // The Animation Logic
   const animateCards = (index) => {
@@ -65,7 +64,7 @@ const CardAccordion = () => {
       {cardData.map((card, index) => (
         <div
           key={index}
-          ref={(el) => (cardsRef.current[index] = el)}
+          ref={(el) => { cardsRef.current[index] = el; }}
           onMouseEnter={() => handleMouseEnter(index)}
           className={cn(
             "relative overflow-hidden rounded-[18px] cursor-pointer bg-neutral-900",
@@ -82,7 +81,7 @@ const CardAccordion = () => {
 
           {/* Horizontal Content - Ref added for GSAP */}
           <div 
-            ref={(el) => (contentRef.current[index] = el)}
+            ref={(el) => { contentRef.current[index] = el; }}
             className="absolute inset-0 p-8 flex flex-col justify-end pointer-events-none"
             style={{ opacity: index === 0 ? 1 : 0 }}
           >
@@ -96,7 +95,7 @@ const CardAccordion = () => {
 
           {/* Vertical Title - Ref added for GSAP */}
           <div 
-            ref={(el) => (verticalRef.current[index] = el)}
+            ref={(el) => { verticalRef.current[index] = el; }}
             className="absolute inset-0 flex items-center justify-center pointer-events-none"
             style={{ opacity: index === 0 ? 0 : 1 }}
           >

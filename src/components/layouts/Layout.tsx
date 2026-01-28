@@ -1,4 +1,3 @@
-import React from 'react';
 import { Outlet, useNavigate } from 'react-router-dom';
 import Header from '../common/header';
 // import { Loader } from './ui/Loader.tsx';

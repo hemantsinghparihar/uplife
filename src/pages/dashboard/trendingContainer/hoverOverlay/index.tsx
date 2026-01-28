@@ -1,11 +1,16 @@
-import React from 'react';
 
+type HoverOverlayProps = {
+  text: string;
+  children: React.ReactNode;
+  overlayColor?: string;
+  textColor?: string;
+};
 const HoverOverlay = ({ 
   overlayColor = 'bg-black/60', 
   text, 
   textColor = 'text-white',
   children 
-}) => {
+}: HoverOverlayProps) => {
   return (
     <div className="relative rounded-3xl overflow-hidden group cursor-pointer">
       {children}

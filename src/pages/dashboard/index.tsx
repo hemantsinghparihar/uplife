@@ -155,7 +155,7 @@ const Dashboard = () => {
       </section>
  
       <section>
-        <h1 className={cn("text-black md:text-[64px] text-[30px] font-poppins font-[400] leading-normal md:text-center ")}>
+        <h1 className={cn("text-black md:text-[64px] text-[30px] font-poppins font-[400] leading-normal md:text-center md:py-[64px] py-[40px]")}>
           What’s Trending At Uplife
           </h1>
         <TrendingContainer/>
@@ -207,12 +207,14 @@ const Dashboard = () => {
 
       <section className='py-[54px] px-[16px] md:px-[64px]'>
         <div>
-          <div className='flex flex-col md:flex-row justify-between items-center'>
-                <h1>
+          <div className='flex flex-col gap-4 md:flex-row md:justify-between md:items-center py-6'>
+                <h1 className='text-[#2D2D2D] text-[24px] md:text-[42px] text-center font-poppins font-[400] leading-normal'>
                   Frequently Asked Questions  
                 </h1>   
-                <div className='search bar'>
-                  <input type="text" placeholder="Search" className='md:w-[300px] h-[40px] '/>
+                <div className='search bar pl-2'>
+                  <input
+                  type="text" placeholder="Search your keyword here"
+                   className='w-full md:w-[300px] h-[40px] border border-black rounded-full px-4 '/>
                 </div>            
           </div>
 

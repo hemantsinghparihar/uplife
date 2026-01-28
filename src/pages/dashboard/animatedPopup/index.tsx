@@ -1,14 +1,13 @@
-import React, { useRef, useState } from 'react';
 import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import { cn } from '../../../utils/utils';
+import { useRef, useState } from 'react';
 import { Images } from '../../../assets';
+import { cn } from '../../../utils/utils';
 const AnimatedPopup = () => {
 const [selectedGoal, setSelectedGoal] = useState(null);
   
-  const overlayRef = useRef();
-  const modalRef = useRef();
-  const imageRef = useRef();
+  const overlayRef = useRef<HTMLDivElement | null>(null);
+  const modalRef = useRef<HTMLDivElement | null>(null);
+  const imageRef = useRef<HTMLImageElement | null>(null);
 
   // GSAP Entrance Animation
   const openPopup = (goal) => {

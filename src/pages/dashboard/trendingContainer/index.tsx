@@ -1,6 +1,5 @@
-import React from 'react';
 import { Images } from '../../../assets';
-import HoverOverlay from './HoverOverlay';
+import HoverOverlay from './hoverOverlay';
 
 const TrendingContainer = () => {
   return (

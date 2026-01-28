@@ -1,4 +1,3 @@
-import React from 'react'
 import { cn } from '../../../utils/utils'
 import { Images } from '../../../assets'
 
